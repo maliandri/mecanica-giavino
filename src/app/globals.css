@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #050a14;
+  --bg-secondary: #080f1e;
+  --red: #e63329;
+  --red-dark: #b52820;
+  --silver: #c8cdd6;
+  --white: #f0f4ff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(230, 51, 41, 0.4), 0 0 40px rgba(230, 51, 41, 0.2);
+}
+.text-glow-red {
+  text-shadow: 0 0 20px rgba(230, 51, 41, 0.6), 0 0 40px rgba(230, 51, 41, 0.3);
+}
+
+@keyframes carDrive {
+  0% { transform: translateX(-110%); opacity: 0; }
+  8% { opacity: 1; }
+  42% { transform: translateX(-5%); opacity: 1; }
+  58% { transform: translateX(-5%); opacity: 1; }
+  92% { opacity: 1; }
+  100% { transform: translateX(110%); opacity: 0; }
+}
+
+@keyframes speedLine {
+  0% { transform: translateX(60%) scaleX(0.1); opacity: 0; }
+  30% { transform: translateX(20%) scaleX(1); opacity: 0.7; }
+  100% { transform: translateX(-100%) scaleX(1); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes roadScroll {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -40; }
+}
+
+@keyframes groundLine {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(500%); opacity: 0; }
+}
+
+@keyframes revUp {
+  from { stroke-dashoffset: 251; }
+  to { stroke-dashoffset: 60; }
+}
+
+.animate-car-drive {
+  animation: carDrive 5s ease-in-out infinite;
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.animate-fadein-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+.animate-fadein-left {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+.animate-fadein-right {
+  animation: fadeInRight 0.8s ease forwards;
+}
+.animate-scan {
+  animation: scanLine 3s linear infinite;
+}
+
+.section-divider {
+  background: linear-gradient(90deg, transparent, #e63329, transparent);
+  height: 1px;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(230, 51, 41, 0.15), 0 0 0 1px rgba(230, 51, 41, 0.25);
+  border-color: rgba(230, 51, 41, 0.25);
+}
+
+.btn-primary {
+  background: #e63329;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.btn-primary:hover::before { transform: translateX(100%); }
+.btn-primary:hover {
+  background: #c82a21;
+  box-shadow: 0 0 30px rgba(230, 51, 41, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(230, 51, 41, 0.5);
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  border-color: #e63329;
+  background: rgba(230, 51, 41, 0.1);
+  box-shadow: 0 0 20px rgba(230, 51, 41, 0.2);
+}
+
+/* Hover glow effect on all regular text links */
+a:not(.btn-primary):not(.btn-outline) {
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+a:not(.btn-primary):not(.btn-outline):hover {
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.35);
 }
