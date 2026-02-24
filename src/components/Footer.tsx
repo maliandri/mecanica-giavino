@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed">
-              Taller mecánico en Neuquén. Más de 20 años de experiencia. Diagnóstico, mantenimiento y reparaciones.
+              Taller mecánico en Neuquén. Más de 5 años de experiencia. Diagnóstico, mantenimiento y reparaciones.
             </p>
           </div>
 

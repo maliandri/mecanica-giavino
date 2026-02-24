@@ -172,7 +172,7 @@ export default function Servicios() {
             Nuestros <span style={{ color: "#e63329" }}>Servicios</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            Más de 20 años brindando soluciones mecánicas en Neuquén. Trabajamos con todas las marcas.
+            Más de 5 años brindando soluciones mecánicas en Neuquén. Trabajamos con todas las marcas.
           </p>
         </motion.div>
 

@@ -6,7 +6,7 @@ import { CheckCircle, MapPin, Clock, Award } from "lucide-react";
 
 const features = [
   "Diagnóstico computarizado profesional",
-  "Mecánicos con más de 20 años de experiencia",
+  "Mecánicos con más de 5 años de experiencia",
   "Trabajo garantizado en todas las reparaciones",
   "Presupuesto sin cargo antes de comenzar",
   "Atención personalizada para cada cliente",
@@ -47,7 +47,7 @@ export default function Nosotros() {
                 className="absolute top-4 right-6 text-[120px] font-black leading-none select-none pointer-events-none"
                 style={{ color: "rgba(230,51,41,0.04)" }}
               >
-                20
+                5
               </span>
 
               <div className="relative z-10">
@@ -57,7 +57,7 @@ export default function Nosotros() {
                 >
                   Experiencia
                 </p>
-                <h3 className="text-5xl font-black text-white mb-1">+20 años</h3>
+                <h3 className="text-5xl font-black text-white mb-1">+5 años</h3>
                 <p className="text-slate-400 text-sm mb-8">
                   en el rubro automotriz en Neuquén
                 </p>
@@ -135,7 +135,7 @@ export default function Nosotros() {
             </div>
 
             <p className="text-slate-400 text-base leading-relaxed">
-              En Mecánica Giavino trabajamos con honestidad y dedicación desde hace más de 20 años.
+              En Mecánica Giavino trabajamos con honestidad y dedicación desde hace más de 5 años.
               Diego Giavino y su equipo se especializan en el diagnóstico y reparación de todo tipo de
               vehículos, ofreciendo soluciones reales a precios justos.
             </p>

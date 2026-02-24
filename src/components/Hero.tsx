@@ -436,7 +436,7 @@ export default function Hero() {
               className="flex gap-8 pt-4 border-t border-white/5"
             >
               <div>
-                <Counter target={20} suffix="+" />
+                <Counter target={5} suffix="+" />
                 <p className="text-xs text-slate-500 mt-1">años experiencia</p>
               </div>
               <div className="w-px bg-white/5" />
