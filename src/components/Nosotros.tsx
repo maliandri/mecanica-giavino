@@ -136,7 +136,7 @@ export default function Nosotros() {
 
             <p className="text-slate-400 text-base leading-relaxed">
               En Mecánica Giavino trabajamos con honestidad y dedicación desde hace más de 5 años.
-              Diego Giavino y su equipo se especializan en el diagnóstico y reparación de todo tipo de
+              Diego Giavino se especializa en el diagnóstico y reparación de todo tipo de
               vehículos, ofreciendo soluciones reales a precios justos.
             </p>
 
