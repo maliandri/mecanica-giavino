@@ -348,15 +348,12 @@ export default function Hero() {
 
       <Particles />
 
-      <div
-        className="relative z-10 max-w-7xl mx-auto"
-        style={{ padding: "7rem 5rem 7rem 5rem" }}
-      >
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 lg:px-20 lg:py-28">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={controls}
-          className="grid lg:grid-cols-2 gap-16 items-center"
+          className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
         >
           {/* LEFT - Text */}
           <div className="space-y-6">
@@ -457,32 +454,35 @@ export default function Hero() {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="relative hidden lg:flex items-center justify-center"
+            className="relative flex items-center justify-center pt-4 lg:pt-0"
           >
-            {/* Outer ring glow */}
+            {/* Outer ring glow - solo en desktop */}
             <motion.div
-              className="absolute w-[420px] h-[420px] rounded-full"
+              className="absolute w-[420px] h-[420px] rounded-full hidden lg:block"
               style={{ border: "1px solid rgba(230,51,41,0.12)" }}
               animate={{ rotate: 360 }}
               transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
-              className="absolute w-[340px] h-[340px] rounded-full"
+              className="absolute w-[340px] h-[340px] rounded-full hidden lg:block"
               style={{ border: "1px dashed rgba(230,51,41,0.06)" }}
               animate={{ rotate: -360 }}
               transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
             />
 
-            {/* Center glow blob */}
+            {/* Center glow blob - solo en desktop */}
             <div
-              className="absolute w-96 h-80 rounded-full pointer-events-none"
+              className="absolute w-96 h-80 rounded-full pointer-events-none hidden lg:block"
               style={{
                 background: "radial-gradient(ellipse, rgba(230,51,41,0.1) 0%, transparent 70%)",
                 filter: "blur(30px)",
               }}
             />
 
-            <Dashboard />
+            {/* Dashboard escalado en mobile */}
+            <div className="scale-[0.72] sm:scale-[0.88] lg:scale-100 origin-center">
+              <Dashboard />
+            </div>
           </motion.div>
         </motion.div>
       </div>
