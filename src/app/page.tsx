@@ -8,7 +8,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export default function Home() {
   return (
-    <main className="mx-3 sm:mx-6 lg:mx-10 xl:mx-auto xl:max-w-[1440px] overflow-hidden rounded-2xl">
+    <main className="mx-auto max-w-[1440px] w-full">
       <Navbar />
       <Hero />
       <Servicios />
