@@ -114,7 +114,7 @@ export default function Nosotros() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left"
           >
             <div>
               <span

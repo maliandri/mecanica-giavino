@@ -356,7 +356,7 @@ export default function Hero() {
           className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
         >
           {/* LEFT - Text */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge */}
             <motion.div variants={itemVariants}>
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase"
@@ -388,14 +388,14 @@ export default function Hero() {
             {/* Subtitle */}
             <motion.p
               variants={itemVariants}
-              className="text-lg text-slate-400 leading-relaxed max-w-md"
+              className="text-lg text-slate-400 leading-relaxed max-w-md mx-auto lg:mx-0"
             >
               Mecánico de confianza.
               Diagnóstico computarizado, trabajo de precisión y honestidad garantizada.
             </motion.p>
 
             {/* Stars */}
-            <motion.div variants={itemVariants} className="flex items-center gap-3">
+            <motion.div variants={itemVariants} className="flex items-center gap-3 justify-center lg:justify-start">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={16} fill="#e63329" color="#e63329" />
@@ -406,7 +406,7 @@ export default function Hero() {
             </motion.div>
 
             {/* CTAs */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-2">
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-2 justify-center lg:justify-start">
               <a
                 href="https://wa.me/5492995906564?text=Hola%20Mecánica%20Giavino%2C%20quiero%20hacer%20una%20consulta"
                 target="_blank"
@@ -430,7 +430,7 @@ export default function Hero() {
             {/* Stats row */}
             <motion.div
               variants={itemVariants}
-              className="flex gap-8 pt-4 border-t border-white/5"
+              className="flex gap-8 pt-4 border-t border-white/5 justify-center lg:justify-start"
             >
               <div>
                 <Counter target={5} suffix="+" />
