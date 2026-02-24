@@ -393,7 +393,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-lg text-slate-400 leading-relaxed max-w-md"
             >
-              Mecánico de confianza. Es unipersonal.
+              Mecánico de confianza.
               Diagnóstico computarizado, trabajo de precisión y honestidad garantizada.
             </motion.p>
 
